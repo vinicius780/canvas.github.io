@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #FFF;
+    margin-bottom: 20px;
+    font-size: 2rem; 
+    text-align: center;
+}
+
+#tela {
+    width: 100%;
+    max-width: 800px; 
+    height: 400px;
+    border: 2px solid #000;
+    background-color: #FFF;
+    cursor: crosshair;
+    margin-bottom: 20px;
+}
+
+.colorArea {
+    display: flex;
+    width: 100%;
+    max-width: 800px; 
+    justify-content: space-between; 
+    margin-bottom: 20px;
+}
+
+.color {
+    flex: 1;
+    height: 40px;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.color.active {
+    border: 5px solid #FFF;
+}
+
+.clear {
+    border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #FFF;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1rem; 
+    transition: background-color 0.3s;
+}
+
+.clear:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+footer {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+footer a { 
+    text-decoration: none;
+    color: #ff0000;
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #tela {
+        width: 90%;
+        height: 300px; 
+    }
+
+    .colorArea {
+        width: 90%;
+        flex-wrap: wrap; 
+    }
+
+    .color {
+        flex: 1 0 30%; 
+        margin: 5px 0;
+    }
+
+    .clear {
+        width: 90%; 
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    #tela {
+        width: 100%;
+        height: 250px; 
+    }
+
+    .colorArea {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .color {
+        flex: 1 0 45%; 
+        margin: 5px 0;
+    }
+
+    .clear {
+        width: 100%; 
+    }
+}
